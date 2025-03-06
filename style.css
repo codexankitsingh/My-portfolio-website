@@ -1,0 +1,267 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav div {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: #fff;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background: #575757;
+}
+/* contains main background image */
+.about-container{
+    width: 100%;
+    border: .2rem solid black;
+    background-image:url(/images/simple\ dark.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-height: 500px;
+}
+#about {
+    padding: 2rem;              /* Consistent padding */
+    margin: 2rem auto;          /* Centered with margin */
+    display: flex;              /* Flexbox for side-by-side layout */
+    gap: 2.5rem;                /* Spacing between items */
+    max-width: 1600px;          /* Limits width on large screens */
+    align-items: center;        /* Vertically centers content */
+}
+
+.about-me {
+    flex:1;
+    text-align: center;
+    padding: 1.5rem;
+    color: white;
+    transition: transform 0.5s ease; /* Smooth hover effect */
+}
+
+.about-me h2 {
+    font-size: 2.5rem;          /* Larger heading */
+    color: rgb(231, 222, 176);           /* Darker, modern color */
+    margin-bottom: 1rem;
+}
+
+.about-me p {
+    font-size: 1.5rem;          /* Readable text size */
+    color: rgb(0, 227, 235);               /* Softer text color */
+    line-height: 1.6;           /* Better readability */
+    text-shadow: 1px 0.5px 1.5px rgba(63, 34, 122, 0.984);
+}
+.about-me a{
+    color: white;
+    text-decoration: none;
+}
+.cv-button{
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cv-button:hover {
+    background: rebeccapurple;
+}
+ 
+/* Profile photo styling */
+.profile-photo {
+    flex: 0 0 400px;
+    margin-left: auto;          /* Pushes to the right */
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 30%;
+    overflow: hidden;           /* Ensures image fits within border */
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    background: #0e0e0e;
+}
+
+.profile-photo img {
+    width: 100%;                /* Fills container */
+    height: auto;               /* Maintains aspect ratio */
+    display: block;             /* Removes bottom gap */
+}
+
+/* Hover effects for interactivity */
+.about-me:hover, .profile-photo:hover {
+    transform: scale(1.05);     /* Slight zoom on hover */
+}
+.projects-section{
+    width: 100%;
+    border: .2rem solid black;
+    background-image: url(/images/pexels-merlin-11167639.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Projects Header Section */
+.Projects-heading {
+    margin: 0;
+    padding: 20px; /* Added padding for content spacing */
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 5px rgb(68, 202, 35); /* Soft shadow */
+    border: 0.1rem solid black;
+    background-size: cover; /* Cleaner than 100% 1500px, scales responsively */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150px; /* Fixed height, adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Ensures padding doesn’t overflow */
+}
+
+/* Projects Section Container */
+#projects {
+    padding: 0;
+    text-align: center;
+    font-size: 2.5rem; /* Responsive base font size */
+}
+
+/* Project Container */
+.project {
+    width: 90%; /* Relative width */
+    max-width: 1600px; /* Optional: caps width on large screens */
+    height: 40rem; /* Fixed height, adjust or use min-height */
+    margin: 0 auto; /* Centers the container, replaces margin-left */
+    display: flex;
+    justify-content: space-between;
+    gap:100px; /* Consistent spacing */
+    box-sizing: border-box;
+}
+
+/* Generic Styling for Project Items */
+.project div {
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* Equal sizing for child divs */
+    box-sizing: border-box;
+}
+/* Project 1 Styling */
+.project1 {
+    font-size: 2rem;
+    width: 25%; /* Relative width */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically centers content */
+    overflow: hidden;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 40%;
+    transition: transform 0.5s ease; /* Smooth hover effect */
+}
+.project1:hover{
+    transform: scale(1.08); /* Slight zoom on hover */
+}
+
+/* Model Inside Project 1 */
+#model {
+    margin-top: 20px; /* Reduced for better fit */
+    width: 80%;
+    height: 70%; /* Increased to fit content better */
+    display: flex;
+    flex-direction: column; /* Stack text and button vertically */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    text-shadow: 3px 3px 5px rgb(68, 202, 35);
+}
+
+/* Project Button */
+#project-1-button {
+    width: 8rem;
+    height: 3rem;
+    border-radius: 10px; /* Simplified from 20px 20px */
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border: none; /* Assuming it’s a button */
+    cursor: pointer;
+    margin-top: 10px; /* Spacing from text */
+}
+
+#project-1-button:hover {
+    background-color: #8d21cf;
+    color: rgba(255, 255, 255, 0.672);
+}
+
+#project-3-button{
+    width: 8rem;
+    height: 2rem;
+    border-radius: 10px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    border: none; /* Assuming it’s a button */
+    cursor: pointer;
+    margin-top: 10px; 
+}
+#project-3-button:hover{
+    background-color: #8d21cf;
+    color: rgba(255, 255, 255, 0.672);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+form label {
+  margin: 5px 0;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #575757;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

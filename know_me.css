@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2fd;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    color: white;
+    text-align: center;
+    padding: 2em;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sections */
+section {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 8px;
+    font-size: 1.6em;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+
+    color:black
+    padding:10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+ul li:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5em;
+        padding: 1.5em;
+    }
+    section {
+        width: 95%;
+        padding: 20px;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+}

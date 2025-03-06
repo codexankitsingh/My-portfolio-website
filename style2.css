@@ -1,0 +1,319 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background: #333;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+/* About Section */
+.about-container {
+    width: 100%;
+    height: 800px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: left;
+    flex-direction: row;
+    gap: 30px;
+
+    background-image: url(/images/background1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+#about{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+/* 
+    background-image: url(/images/pexels-merlin-11167645.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+
+}
+.about-me {
+    width: 100%;
+    height: 400px;
+    color: rgb(238, 199, 100);
+
+    max-width: 50%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.427);
+    transition: .3s ease-in-out;
+   
+    text-shadow: 3px 3px 6px rgb(68, 202, 35); /* Soft shadow */
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.about-me p {
+    font-size: 1.5rem;
+    color: #2eddbf;
+    margin-bottom: 10px;
+}
+
+.about-me a {
+    color: #ff9800;
+    text-decoration: none;
+}
+#cv{
+    color: white;
+
+}
+.cv-button {
+    padding: 10px 20px;
+    background:  #e68900;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition:0.3s;
+}
+
+.cv-button:hover {
+    background: #fc9801;
+}
+
+/* Profile Image */
+.profile-photo img {
+    width: 400px;
+    height: 400px;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 30%;
+    border-top-right-radius: 5%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+.profile-photo img:hover {
+    transform:scale(1.2);
+}
+.about-me:hover{
+    transform: scale(1.2);
+}
+/* Projects Section */
+.projects-section {
+    width: 100%;
+    height: 500px;
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+
+    background-image: url(/images/background-4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+    position: relative;
+}
+
+.projects-section h1 {
+    color: white;
+    font-size: 70px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(68, 202, 35); /* Soft shadow */
+}
+
+.project {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.project1 {
+    color: white;
+    padding: 40px;
+    border-radius: 50%;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content */
+    align-items: center;
+
+    background-image: url(/images/background8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    transition: .3s ease-in-out;
+}
+
+.project1:hover {
+    transform: scale(1.2);
+}
+.project1 button {
+    background: #ff9800;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.project1 button:hover {
+    background: #e68900;
+}
+
+#p2, #p4{
+    background-image: url(/images/pexels-merlin-11167645.jpg);
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content */
+    align-items: center;
+}
+
+#p3{
+    background-image: url(/images/background6.jpg);
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content */
+    align-items: center;
+}
+
+/* Contact Section */
+#contact {
+    border: .2rem solid black;
+    background: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+
+    background-image: url(/images/pexels-merlin-11167639.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#contact h2 {
+    color: rgb(6, 220, 77);
+    font-size: 3rem;
+    margin-bottom: 20px;
+
+    text-shadow: 3px 3px 6px rgba(234, 12, 12, 0.742); /* Soft shadow */
+}
+
+/* Form Styling */
+form {
+    color: white;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(125, 171, 134, 0.502);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: #fffbfb;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+form button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    transform: scale(1.1);
+    background: #e68900;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background:black;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me, form {
+        width: 90%;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project1 {
+        width: 80%;
+    }
+}
