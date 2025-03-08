@@ -34,6 +34,7 @@ nav a:hover {
 
 /* About Section */
 .about-container {
+    border: .2rem solid white;
     width: 100%;
     height: 800px;
     margin: 0px;
@@ -45,7 +46,7 @@ nav a:hover {
     text-align: left;
     flex-direction: row;
     gap: 30px;
-
+    flex-wrap: wrap;
     background-image: url(/images/background1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -69,13 +70,14 @@ nav a:hover {
 }
 .about-me {
     width: 100%;
-    height: 400px;
+    height: 450px;
     color: rgb(238, 199, 100);
-
+    border: .1rem solid rgb(136, 168, 165);
     max-width: 50%;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.427);
+    border-radius: 50px;
+
+    box-shadow: 10px 10px 19px rgba(214, 205, 205, 0.588);
     transition: .3s ease-in-out;
    
     text-shadow: 3px 3px 6px rgb(68, 202, 35); /* Soft shadow */
@@ -101,6 +103,7 @@ nav a:hover {
 
 }
 .cv-button {
+    margin: .5rem;
     padding: 10px 20px;
     background:  #e68900;
     color: white;
@@ -117,6 +120,7 @@ nav a:hover {
 
 /* Profile Image */
 .profile-photo img {
+
     width: 400px;
     height: 400px;
     border-top-left-radius: 50%;
@@ -124,17 +128,21 @@ nav a:hover {
     border-top-right-radius: 5%;
     object-fit: cover;
     transition: .5s ease;
+    display: flex;
+    flex-wrap: wrap;
 }
 .profile-photo img:hover {
     transform:scale(1.2);
 }
 .about-me:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 /* Projects Section */
 .projects-section {
-    width: 100%;
-    height: 500px;
+    border: .2rem solid white;
+    max-width: 100%;
+    height: auto;
+    min-height: 500px;
     background: #fff;
     padding: 50px 20px;
     text-align: center;
@@ -142,46 +150,64 @@ nav a:hover {
     background-image: url(/images/background-4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center left;
+    background-position: center;
     position: relative;
+
+    display: flex;
+    flex: 1 1 200px;
+    max-width:100%;
 }
 
-.projects-section h1 {
+#projects h1 {
+    display: inline-block;
+    border: .2rem solid white;
     color: white;
     font-size: 70px;
     margin-bottom: 20px;
     text-shadow: 3px 3px 6px rgba(68, 202, 35); /* Soft shadow */
 }
 
+
+
 .project {
-    width: 100%;
-    height: 200px;
+
+    border: .1rem solid red;
+    max-width:100%;
+    height: auto;
+    min-height: 200px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 4rem;
+
+
+  
+
 }
 
 .project1 {
     color: white;
     padding: 40px;
     border-radius: 50%;
-    width: 300px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
     justify-content: center; /* Center content */
     align-items: center;
 
-    background-image: url(/images/background8.jpg);
+    background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
 
     transition: .3s ease-in-out;
+
+    flex: 1 1 200px;
+    max-width: 300px;
+    height:auto;
+ 
 }
 
 .project1:hover {
@@ -203,7 +229,7 @@ nav a:hover {
 }
 
 #p2, #p4{
-    background-image: url(/images/pexels-merlin-11167645.jpg);
+    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     justify-content: center; /* Center content */
@@ -211,11 +237,17 @@ nav a:hover {
 }
 
 #p3{
-    background-image: url(/images/background6.jpg);
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     justify-content: center; /* Center content */
     align-items: center;
+    background: rgba(10, 0, 0, 0.2);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+
+    background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699d 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+    background-position: center;
 }
 
 /* Contact Section */
@@ -244,7 +276,7 @@ form {
     color: white;
     max-width: 500px;
     margin: 0 auto;
-    background: rgba(125, 171, 134, 0.502);
+    background-image: linear-gradient(to right, #a8caba2d 0%, #5d4157 100%);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -296,24 +328,83 @@ footer {
     bottom: 0;
     width: 100%;
   }
-/* Responsive Design */
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    #about {
+        flex-direction: column;
+        height: auto;
+        text-align: center; /* Center align text on smaller screens */
+    }
+
+    .about-me {
+        max-width: 80%; /* Adjust width for better fit */
+        height: auto;
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+
+    .about-me h2 {
+        font-size: 2rem;
+    }
+
+    .about-me p {
+        font-size: 1.2rem;
+    }
+
+    .cv-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .about-me {
+        max-width: 95%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .about-me h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-me p {
+        font-size: 1rem;
+    }
+
+    .cv-button {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+}
+/* Responsive Profile Photo */
+@media (max-width: 1024px) {
+    .profile-photo img {
+        width: 300px; /* Reduce size for tablets */
+        height: 300px;
+    }
+}
+
 @media (max-width: 768px) {
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .profile-photo img {
+        width: 250px; /* Further reduce size for smaller screens */
+        height: 250px;
     }
+}
 
-    .about-me, form {
-        width: 90%;
-    }
-
-    .project {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project1 {
-        width: 80%;
+@media (max-width: 480px) {
+    .profile-photo img {
+        width: 200px; /* Optimize for mobile screens */
+        height: 200px;
+        border-top-left-radius: 40%;
+        border-bottom-right-radius: 20%;
+        border-top-right-radius: 10%;
     }
 }
