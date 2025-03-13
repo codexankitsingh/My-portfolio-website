@@ -1,0 +1,80 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #0f1218; /* Dark theme */
+    color: white;
+}
+
+/* Skills Title */
+.skills h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Grid Items */
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Icon Styling */
+.item img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.item:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.item:hover img {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .skills h1 {
+        font-size: 20px;
+    }
+
+    .grid-box {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 15px;
+    }
+
+    .item img {
+        width: 40px;
+        height: 40px;
+    }
+}

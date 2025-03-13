@@ -15,12 +15,14 @@ body {
 
 /* Navigation Bar */
 nav {
+    width: 100%;
     background: #333;
     padding: 15px 20px;
     text-align: center;
 }
 
 nav a {
+
     color: white;
     text-decoration: none;
     margin: 0 15px;
@@ -76,7 +78,7 @@ nav a:hover {
     max-width: 50%;
     padding: 30px;
     border-radius: 50px;
-
+    box-sizing: border-box;
     box-shadow: 10px 10px 19px rgba(214, 205, 205, 0.588);
     transition: .3s ease-in-out;
    
@@ -89,9 +91,10 @@ nav a:hover {
 }
 
 .about-me p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #2eddbf;
     margin-bottom: 10px;
+    overflow: hidden;
 }
 
 .about-me a {
@@ -137,12 +140,123 @@ nav a:hover {
 .about-me:hover{
     transform: scale(1.1);
 }
+
+/* skills section */
+
+/* Container Styling */
+.container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #0f1218; /* Dark theme */
+    color: white;
+    border: .1rem solid yellow;
+}
+
+/* Skills Title */
+.skill{
+    align-self: flex-start; /* Moves the section to the start of the container */
+    font-size: 2rem;
+    font-weight: bold;
+    
+    background: linear-gradient(to right, #e879f9, #72a3f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.skill h1{
+    width: auto;
+    text-align: center;
+    font-size: 80px;
+
+}
+
+.skills{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding:1rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 10px white;
+}
+
+.skills h1 {
+    margin-top: 1.2rem;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* Grid Items */
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Icon Styling */
+.item img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.item:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.item:hover img {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .skills h1 {
+        font-size: 20px;
+    }
+
+    .grid-box {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 15px;
+    }
+
+    .item img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
 /* Projects Section */
 .projects-section {
     border: .2rem solid white;
     max-width: 100%;
-    height: auto;
-    min-height: 500px;
+    height: minmax(900px,auto);
     background: #fff;
     padding: 50px 20px;
     text-align: center;
@@ -154,7 +268,7 @@ nav a:hover {
     position: relative;
 
     display: flex;
-    flex: 1 1 200px;
+    flex: 1 1 250px;
     max-width:100%;
 }
 
@@ -172,8 +286,10 @@ nav a:hover {
 .project {
 
     border: .1rem solid red;
+    margin-top: 2.5rem;
+    padding: 2rem;
     max-width:100%;
-    height: auto;
+    height: minmax(500px,auto);
     min-height: 200px;
     display: flex;
     justify-content: center;
